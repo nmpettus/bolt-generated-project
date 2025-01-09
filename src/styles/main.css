@@ -1,0 +1,286 @@
+/* Base styles */
+body { 
+    font-family: Arial, sans-serif; 
+    margin: 20px; 
+    background: #f0f2f5; 
+}
+
+.container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.card { 
+    background: white; 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+}
+
+.page-title {
+    text-align: center;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+}
+
+/* Form styles */
+.input-group { 
+    margin-bottom: 15px; 
+}
+
+.input-group label { 
+    display: block; 
+    margin-bottom: 5px; 
+    font-weight: bold; 
+}
+
+input, select, textarea { 
+    width: 100%; 
+    padding: 8px; 
+    margin-bottom: 10px; 
+    border: 1px solid #ddd; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+}
+
+textarea { 
+    height: 100px; 
+}
+
+/* Button styles */
+button { 
+    background: #2563eb; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    margin-right: 10px; 
+}
+
+button:hover { 
+    background: #1d4ed8; 
+}
+
+.export-btn { 
+    background: #059669; 
+}
+
+.export-btn:hover { 
+    background: #047857; 
+}
+
+.import-btn { 
+    background: #7c3aed; 
+}
+
+.import-btn:hover { 
+    background: #6d28d9; 
+}
+
+.delete-btn { 
+    background: #dc2626; 
+    padding: 5px 10px; 
+}
+
+.delete-btn:hover { 
+    background: #b91c1c; 
+}
+
+.edit-btn { 
+    background: #f59e0b; 
+    padding: 5px 10px; 
+}
+
+.edit-btn:hover { 
+    background: #d97706; 
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Status message styles */
+.status-message {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    display: none;
+}
+
+.status-success {
+    background: #d1fae5;
+    color: #065f46;
+    border: 1px solid #059669;
+}
+
+.status-error {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #dc2626;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    background: white;
+    margin: 50px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 8px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+}
+
+/* Timeline styles */
+.visual-timeline {
+    margin: 20px 0;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    position: relative;
+    overflow-x: auto;
+    overflow-y: visible;
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 #f1f5f9;
+    height: 120px;
+}
+
+.timeline-container {
+    position: relative;
+    height: 60px;
+    margin: 0 40px;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 1px;
+    background: #e5e7eb;
+    z-index: 1;
+}
+
+.month-marker {
+    position: absolute;
+    top: calc(50% - 10px);
+    width: 1px;
+    height: 20px;
+    background: #94a3b8;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.month-label {
+    position: absolute;
+    top: calc(50% + 15px);
+    transform: translateX(-50%);
+    font-size: 10px;
+    color: #64748b;
+    text-align: center;
+    z-index: 2;
+    white-space: nowrap;
+}
+
+.event-marker {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    z-index: 3;
+    transition: all 0.2s ease;
+    border: 2px solid white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.event-marker:hover {
+    transform: translate(-50%, -50%) scale(1.3);
+    z-index: 100;
+}
+
+.event-tooltip {
+    position: fixed;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 12px;
+    width: 250px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    font-size: 12px;
+    z-index: 1000;
+    pointer-events: none;
+    display: none;
+}
+
+/* Category colors */
+.category-Medical { 
+    background: #3b82f6;
+    border-color: #2563eb;
+}
+
+.category-Appointments { 
+    background: #10b981;
+    border-color: #059669;
+}
+
+.category-Personal { 
+    background: #ef4444;
+    border-color: #dc2626;
+}
+
+.category-Administrative { 
+    background: #8b5cf6;
+    border-color: #7c3aed;
+}
+
+/* Timeline item styles */
+.timeline-item {
+    border-left: 3px solid #2563eb;
+    margin-left: 20px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.timeline-item::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background: #2563eb;
+    border-radius: 50%;
+    position: absolute;
+    left: -7px;
+    top: 0;
+}
+
+#importFile { 
+    display: none; 
+}

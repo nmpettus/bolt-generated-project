@@ -1,0 +1,169 @@
+body { 
+    font-family: Arial, sans-serif; 
+    margin: 20px; 
+    background: #f0f2f5; 
+}
+
+.container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.card { 
+    background: white; 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+}
+
+.input-group { 
+    margin-bottom: 15px; 
+}
+
+.input-group label { 
+    display: block; 
+    margin-bottom: 5px; 
+    font-weight: bold; 
+}
+
+input, select, textarea { 
+    width: 100%; 
+    padding: 8px; 
+    margin-bottom: 10px; 
+    border: 1px solid #ddd; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+}
+
+textarea { 
+    height: 100px; 
+}
+
+button { 
+    background: #2563eb; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    margin-right: 10px; 
+}
+
+button:hover { 
+    background: #1d4ed8; 
+}
+
+.export-btn { 
+    background: #059669; 
+}
+
+.export-btn:hover { 
+    background: #047857; 
+}
+
+.import-btn { 
+    background: #7c3aed; 
+}
+
+.import-btn:hover { 
+    background: #6d28d9; 
+}
+
+.delete-btn { 
+    background: #dc2626; 
+    padding: 5px 10px; 
+}
+
+.delete-btn:hover { 
+    background: #b91c1c; 
+}
+
+.edit-btn { 
+    background: #f59e0b; 
+    padding: 5px 10px; 
+}
+
+.edit-btn:hover { 
+    background: #d97706; 
+}
+
+.status-message {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    display: none;
+}
+
+.status-success {
+    background: #d1fae5;
+    color: #065f46;
+    border: 1px solid #059669;
+}
+
+.status-error {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #dc2626;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    background: white;
+    margin: 50px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 8px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+}
+
+.timeline-item {
+    border-left: 3px solid #2563eb;
+    margin-left: 20px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.timeline-item::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background: #2563eb;
+    border-radius: 50%;
+    position: absolute;
+    left: -7px;
+    top: 0;
+}
+
+#importFile { 
+    display: none; 
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}

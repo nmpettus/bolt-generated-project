@@ -1,0 +1,60 @@
+/* Timeline marker base styles */
+.event-marker {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    border: 3px solid white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+}
+
+.event-marker:hover {
+    transform: translate(-50%, -50%) scale(1.5);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    z-index: 100;
+}
+
+/* Primary color category styles */
+.event-marker.category-Medical {
+    background-color: #0000ff !important; /* Pure Blue */
+    border-color: #0000cc !important;
+    box-shadow: 0 0 8px rgba(0, 0, 255, 0.4);
+}
+
+.event-marker.category-Appointments {
+    background-color: #00ff00 !important; /* Pure Green */
+    border-color: #00cc00 !important;
+    box-shadow: 0 0 8px rgba(0, 255, 0, 0.4);
+}
+
+.event-marker.category-Personal {
+    background-color: #ff0000 !important; /* Pure Red */
+    border-color: #cc0000 !important;
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.4);
+}
+
+.event-marker.category-Administrative {
+    background-color: #ffff00 !important; /* Pure Yellow */
+    border-color: #cccc00 !important;
+    box-shadow: 0 0 8px rgba(255, 255, 0, 0.4);
+}
+
+/* Hover effects */
+.event-marker.category-Medical:hover {
+    box-shadow: 0 0 12px rgba(0, 0, 255, 0.6);
+}
+
+.event-marker.category-Appointments:hover {
+    box-shadow: 0 0 12px rgba(0, 255, 0, 0.6);
+}
+
+.event-marker.category-Personal:hover {
+    box-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
+}
+
+.event-marker.category-Administrative:hover {
+    box-shadow: 0 0 12px rgba(255, 255, 0, 0.6);
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Medical Timeline Tracker</title>
+    <link rel="stylesheet" href="/src/styles/main.css">
+    <link rel="stylesheet" href="/src/styles/timeline.css">
+    <link rel="stylesheet" href="/src/styles/timelineMarker.css">
+    <link rel="stylesheet" href="/src/styles/theme-selector.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1 class="page-title">Medical Timeline Tracker</h1>
+            
+            <div class="button-group">
+                <button class="export-btn" onclick="exportData()">Export Timeline</button>
+                <button class="import-btn" onclick="importData()">Import Timeline</button>
+                <input type="file" id="importFile" accept=".json" onchange="handleImport(event)">
+            </div>
+
+            <div id="statusMessage" class="status-message"></div>
+            
+            <h2>Add New Event</h2>
+            <div class="input-group">
+                <label>Date:</label>
+                <input type="date" id="eventDate" required>
+                
+                <label>Category:</label>
+                <select id="eventCategory" onchange="updateEventTypes()" required>
+                    <option value="Medical">Medical</option>
+                    <option value="Appointments">Appointments</option>
+                    <option value="Personal">Personal</option>
+                    <option value="Administrative">Administrative</option>
+                </select>
+                
+                <label>Event Type:</label>
+                <select id="eventType" required></select>
+                
+                <label>Title:</label>
+                <input type="text" id="eventTitle" placeholder="Event Title" required>
+                
+                <label>Impact Level (1-5):</label>
+                <select id="eventSeverity">
+                    <option value="1">Low Impact</option>
+                    <option value="2">Moderate Impact</option>
+                    <option value="3">Significant Impact</option>
+                    <option value="4">High Impact</option>
+                    <option value="5">Critical Impact</option>
+                </select>
+                
+                <label>Medical Details:</label>
+                <textarea id="eventDetails" placeholder="Enter medical details..."></textarea>
+                
+                <label>Personal Notes:</label>
+                <textarea id="personalNotes" placeholder="Enter personal notes..."></textarea>
+                
+                <button onclick="addEvent()">Add Event</button>
+            </div>
+
+            <h2>Timeline Overview</h2>
+            <div class="visual-timeline">
+                <div class="timeline-container" id="timelineContainer"></div>
+            </div>
+
+            <h2>Detailed Timeline</h2>
+            <div id="timeline"></div>
+        </div>
+    </div>
+
+    <!-- Edit Modal -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeEditModal()">&times;</span>
+            <h2>Edit Event</h2>
+            <div class="input-group">
+                <input type="hidden" id="editEventId">
+                
+                <label>Date:</label>
+                <input type="date" id="editEventDate" required>
+                
+                <label>Category:</label>
+                <select id="editEventCategory" onchange="updateEditEventTypes()" required>
+                    <option value="Medical">Medical</option>
+                    <option value="Appointments">Appointments</option>
+                    <option value="Personal">Personal</option>
+                    <option value="Administrative">Administrative</option>
+                </select>
+                
+                <label>Event Type:</label>
+                <select id="editEventType" required></select>
+                
+                <label>Title:</label>
+                <input type="text" id="editEventTitle" placeholder="Event Title" required>
+                
+                <label>Impact Level (1-5):</label>
+                <select id="editEventSeverity">
+                    <option value="1">Low Impact</option>
+                    <option value="2">Moderate Impact</option>
+                    <option value="3">Significant Impact</option>
+                    <option value="4">High Impact</option>
+                    <option value="5">Critical Impact</option>
+                </select>
+                
+                <label>Medical Details:</label>
+                <textarea id="editEventDetails" placeholder="Enter medical details..."></textarea>
+                
+                <label>Personal Notes:</label>
+                <textarea id="editEventPersonalNotes" placeholder="Enter personal notes..."></textarea>
+                
+                <button onclick="saveEdit()">Save Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tooltip container -->
+    <div id="eventTooltip" class="event-tooltip"></div>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+/* Remove the duplicate category colors from timeline.css since they're now in timelineMarker.css */
+.visual-timeline {
+    margin: 20px 0;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    position: relative;
+    overflow-x: auto;
+    overflow-y: visible;
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 #f1f5f9;
+    height: 120px;
+}
+
+.timeline-container {
+    position: relative;
+    height: 60px;
+    margin: 0 40px;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 1px;
+    background: #e5e7eb;
+    z-index: 1;
+}
+
+.month-marker {
+    position: absolute;
+    top: calc(50% - 10px);
+    width: 1px;
+    height: 20px;
+    background: #94a3b8;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.month-label {
+    position: absolute;
+    top: calc(50% + 15px);
+    transform: translateX(-50%);
+    font-size: 10px;
+    color: #64748b;
+    text-align: center;
+    z-index: 2;
+    white-space: nowrap;
+}
+
+.event-tooltip {
+    position: fixed;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 12px;
+    width: 250px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    font-size: 12px;
+    z-index: 1000;
+    pointer-events: none;
+    display: none;
+}
